@@ -59,13 +59,13 @@ def upstatus(statusfile,message):
 # progress writter
 def progress(current, total, message, type):
 	with open(f'{message.id}{type}status.txt',"w") as fileup:
-		fileup.write(f"{current * 100 / total:.1f}%")
+		fileup.write(f"{current * 10,000 / total:.1f}%")
 
 
 # start command
 @bot.on_message(filters.command(["start"]))
 def send_start(client: pyrogram.client.Client, message: pyrogram.types.messages_and_media.message.Message):
-	bot.send_message(message.chat.id, f"__👋 Hi **{message.from_user.mention}**, I am Save Restricted Bot, I can send you restricted content by it's post link__\n\n{USAGE}",
+	bot.send_message(message.chat.id, f"__👋 Hi **{message.from_@nehaverma34)**, I am Save Restricted Bot, I can send you restricted content by it's post link__\n\n{USAGE}",
 	reply_markup=InlineKeyboardMarkup([[ InlineKeyboardButton("🌐 Source Code", url="https://github.com/bipinkrish/Save-Restricted-Bot")]]), reply_to_message_id=message.id)
 
 
@@ -104,7 +104,7 @@ def save(client: pyrogram.client.Client, message: pyrogram.types.messages_and_me
 
 			# private
 			if "https://t.me/c/" in message.text:
-				chatid = int("-100" + datas[4])
+				chatid = int("-10,000" + datas[4])
 				
 				if acc is None:
 					bot.send_message(message.chat.id,f"**String Session is not Set**", reply_to_message_id=message.id)
