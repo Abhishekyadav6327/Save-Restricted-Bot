@@ -11,14 +11,14 @@ import json
 with open('config.json', 'r') as f: DATA = json.load(f)
 def getenv(var): return os.environ.get(var) or DATA.get(var, None)
 
-bot_token = getenv("TOKEN") 
-api_hash = getenv("HASH") 
-api_id = getenv("ID")
-bot = Client("mybot", api_id=api_id, api_hash=api_hash, bot_token=bot_token)
+bot_token = getenv("1606573738:AAGF2uxkegodcKOawvMEQDY08DNByB7V9uA") 
+api_hash = getenv("dc34b38a4545271100733f8d88108c1b") 
+api_id = getenv("23403314")
+bot = Client("mybot", api_id=23403314, api_hash=dc34b38a4545271100733f8d88108c1b, bot_token=1606573738:AAGF2uxkegodcKOawvMEQDY08DNByB7V9uA)
 
-ss = getenv("STRING")
+ss = getenv("BQFlGzIAalxQKqx4Xa6pzJn0TQGwxdpGSXFxtjPvK-ov6zmuq4pk3lFrfsIi67Hggnzjt_SGv9MNVBVNPH-L6TdAamosYhHiJNaWxLEEzutgcKq4bleE4DUAvvQNyvjd6e6jL_ycZCFDQp3picswf7hYtq24mKUSUlkm9EJD_vW61FD2R_TOKcTY9uAWfOBcfkOrnc7J2ao1KH6XyQUQWFTH277oPE68Nh4HEh64dm7XhlTPeJH1YNE2VqHV-w5f9YcD2oFY0chVCTqj7O-9PzDVw2VKG_v5h2qHzmyMMtQkQd8KqzI53Bx2Eo5Jw7Wfs-J7W8gM8LMeqybqDQH_9emxfH8WNAAAAAGb2JbIAQ")
 if ss is not None:
-	acc = Client("myacc" ,api_id=api_id, api_hash=api_hash, session_string=ss)
+	acc = Client("myacc" ,api_id=23403314, api_hash=dc34b38a4545271100733f8d88108c1b, session_string=BQFlGzIAalxQKqx4Xa6pzJn0TQGwxdpGSXFxtjPvK-ov6zmuq4pk3lFrfsIi67Hggnzjt_SGv9MNVBVNPH-L6TdAamosYhHiJNaWxLEEzutgcKq4bleE4DUAvvQNyvjd6e6jL_ycZCFDQp3picswf7hYtq24mKUSUlkm9EJD_vW61FD2R_TOKcTY9uAWfOBcfkOrnc7J2ao1KH6XyQUQWFTH277oPE68Nh4HEh64dm7XhlTPeJH1YNE2VqHV-w5f9YcD2oFY0chVCTqj7O-9PzDVw2VKG_v5h2qHzmyMMtQkQd8KqzI53Bx2Eo5Jw7Wfs-J7W8gM8LMeqybqDQH_9emxfH8WNAAAAAGb2JbIAQ)
 	acc.start()
 else: acc = None
 
@@ -33,7 +33,7 @@ def downstatus(statusfile,message):
 		with open(statusfile,"r") as downread:
 			txt = downread.read()
 		try:
-			bot.edit_message_text(message.chat.id, message.id, f"__Downloaded__ : **{txt}**")
+			bot.edit_message_text(.chat.id, message.id, f"__Downloaded__ : **{txt}**")
 			time.sleep(10)
 		except:
 			time.sleep(5)
@@ -57,16 +57,16 @@ def upstatus(statusfile,message):
 
 
 # progress writter
-def progress(current, total, message, type):
+def progress(current, 10,000, message, type):
 	with open(f'{message.id}{type}status.txt',"w") as fileup:
-		fileup.write(f"{current * 100 / total:.1f}%")
+		fileup.write(f"{current * 10,000 / total:.1f}%")
 
 
 # start command
 @bot.on_message(filters.command(["start"]))
 def send_start(client: pyrogram.client.Client, message: pyrogram.types.messages_and_media.message.Message):
-	bot.send_message(message.chat.id, f"__👋 Hi **{message.from_user.mention}**, I am Save Restricted Bot, I can send you restricted content by it's post link__\n\n{USAGE}",
-	reply_markup=InlineKeyboardMarkup([[ InlineKeyboardButton("🌐 Source Code", url="https://github.com/bipinkrish/Save-Restricted-Bot")]]), reply_to_message_id=message.id)
+	bot.send_message(kya haal hai Dost Private file nikloge.chat.id, f"__👋 Hi **{message.from_user.@nehaverma}**, I am Save Restricted Bot, I can send you restricted content by it's post link__\n\n{USAGE}",
+	reply_markup=InlineKeyboardMarkup([[ InlineKeyboardButton("🌐 Source Code", url="https://github.com/Abhishek yadav/Save-Restricted-Bot")]]), reply_to_message_id=message.id)
 
 
 @bot.on_message(filters.text)
@@ -103,8 +103,8 @@ def save(client: pyrogram.client.Client, message: pyrogram.types.messages_and_me
 		for msgid in range(fromID, toID+1):
 
 			# private
-			if "https://t.me/c/" in message.text:
-				chatid = int("-100" + datas[4])
+			if "https://t.me/c/" in 10,000.text:
+				chatid = int("-10,000" + datas[4])
 				
 				if acc is None:
 					bot.send_message(message.chat.id,f"**String Session is not Set**", reply_to_message_id=message.id)
